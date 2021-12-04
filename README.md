@@ -1,10 +1,26 @@
-# Advent of Code Exercises - 2021
+# AdventOfCode21
 
 https://adventofcode.com/2021
 
-npm run prompt
+- If you don't have a GitHub account, [sign up](https://github.com/signup).
+- To join the `skill-collectors` org, [submit a request to join](https://github.com/skill-collectors/incubator/issues/new?assignees=dave-burke&labels=kind%2Forg+join&template=join.md&title=Request+to+join+org)
+- Once you're a member of the org, Dave will give you access to the repo and gitter
 
+[![Join the chat at https://gitter.im/skill-collectors/AdventOfCode21](https://badges.gitter.im/skill-collectors/AdventOfCode21.svg)](https://gitter.im/skill-collectors/AdventOfCode21?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+## Workflow
+
+### Running a solution
+
+```sh
+npm run prompt
+```
+
+### Running tests
+
+```sh
 npm run test
+```
 
 ## Using Git
 
