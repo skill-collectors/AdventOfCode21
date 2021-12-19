@@ -3,6 +3,7 @@
     "lib": ["es2021"],
     "module": "commonjs",
     "target": "es2021",
+    "types": ["@types/jest", "@types/node", "@types/prompts"],
 
     "strict": true,
     "esModuleInterop": true,

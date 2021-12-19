@@ -12,9 +12,8 @@ const prompts = require("prompts");
  *    - input files are in the Inputs directory, and name in the format of <challenge day>_<username>.txt. ex: 1_bburggraff.txt
  *    - solutions are in the solutions directory, and the name of the file is the day number. That file needs to have a function named "answer" which
  *      has 1 parameter. That parameter needs to take a relative filepath. The answer should be returned via the console log in the function.
-*/
-(async () => {
-
+ */
+(async (): Promise<void> => {
   // Get list of files in inputs dir
   const data = readdirSync(inputFiles).map((x) => {
     const c = x.match(/^\d/) ?? ["unknown"];
@@ -60,10 +59,9 @@ const prompts = require("prompts");
     },
   ]);
 
-
   // Dynamically import solution
-  const func = await import(`./solutions/${response.challenge}`)
+  const func = await import(`./solutions/${response.challenge}`);
 
   // Use selected file
-  await func.answer(`${inputFiles}${response.input}`)
+  await func.answer(`${inputFiles}${response.input}`);
 })();

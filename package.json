@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.ts",
   "scripts": {
-    "test": "ts-node ./main.ts",
+    "test": "jest",
     "prompt": "ts-node ./prompt.ts"
   },
   "repository": {
@@ -23,5 +23,11 @@
     "prompts": "^2.4.2",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.12",
+    "@types/prompts": "^2.0.14",
+    "ts-jest": "^27.1.1"
   }
 }
