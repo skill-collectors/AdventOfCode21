@@ -4,6 +4,7 @@ import { readToArray } from "../utilities/utils";
 export const answer = async (file: string) => {
   const input = await readToArray(file);
   console.log(`Part 1: ${calc(input)}`);
+  console.log(`Part 2: ${calc2(input)}`);
 };
 
 export const calc = (input: string[]) => {
@@ -11,7 +12,7 @@ export const calc = (input: string[]) => {
   let epsilon = '';
   for(let digit = 0; digit < input[0].length; digit++){
     let nZero = 0;
-    let nOne = 1;
+    let nOne = 0;
     for(let line of input) {
       const x = line[digit];
       if(x === '0') nZero++
@@ -30,7 +31,7 @@ export const calc = (input: string[]) => {
 
 function mostCommonDigit(input: string[], digit: number) {
   let nZero = 0;
-  let nOne = 1;
+  let nOne = 0;
   for(let line of input) {
       const x = line[digit];
       if(x === '0') nZero++
@@ -46,7 +47,7 @@ export const calcOxygenGeneratorRating = function(input: string[]) {
     if(values.length === 1) {
       break;
     }
-    const mostCommon = mostCommonDigit(input, digit)
+    const mostCommon = mostCommonDigit(values, digit)
     values = values.filter(value => value[digit] === mostCommon);
   }
   return values[0];
@@ -58,7 +59,7 @@ export const calcCo2ScrubberRating = function(input: string[]) {
     if(values.length === 1) {
       break;
     }
-    const mostCommon = mostCommonDigit(input, digit)
+    const mostCommon = mostCommonDigit(values, digit)
     const leastCommon = mostCommon === '0' ? '1' : '0'
     values = values.filter(value => value[digit] === leastCommon);
   }
